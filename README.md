@@ -12,3 +12,14 @@ Keyboard Layouts
 
 To add a keyboard layout, you need to import it in your code: #include "DigiKeyboardDe.h". Needs to be in the same path as the ".ino" files.
 ---
+
+    #include "DigiKeyboardDe.h"  
+    void setup() {  
+      DigiKeyboardDe.sendKeyStroke(0);  
+      DigiKeyboardDe.sendKeyStroke(KEY_R, MOD_GUI_LEFT);   
+      DigiKeyboardDe.println("cmd");
+      DigiKeyboard.delay(500); 
+      DigiKeyboardDe.println("echo Hello World!");
+    }  
+    void loop() {  
+    } 
